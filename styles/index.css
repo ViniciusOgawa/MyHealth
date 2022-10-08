@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre&family=Roboto:wght@300&display=swap');
+
+body {
+    height: calc(100vh - 87px);
+    font-family: 'Averia Libre', cursive;
+    background-image: url("../img/img/body-bg.jfif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+header .tenhocontaButton {
+    font-family: 'Averia Libre', cursive;
+    width: 140px;
+    height: 35px;
+    background-color: hsla(203, 65%, 55%, 1);
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    border: none;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+main {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main section{
+    width:841px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 94px;
+}
+
+main section p {
+    font-weight: 400;
+    font-size: 50px;
+    color: hsla(203, 65%, 55%, 1);
+    text-align: center;
+}
+
+main section input {
+    font-family: 'Averia Libre', cursive;
+    width: 200px;
+    height: 45px; 
+    background-color: hsla(203, 65%, 55%, 1);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    border: none;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}

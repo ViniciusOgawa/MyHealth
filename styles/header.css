@@ -1,0 +1,25 @@
+header {
+    padding: 0px 18px 0px 18px;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsla(174, 58%, 72%, 1);
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+header .logo img {
+    height: 45px;
+    width: 45px;
+}
+
+header .logo p {
+    font-size: 35px;
+    color: hsla(203, 65%, 55%, 1);
+}

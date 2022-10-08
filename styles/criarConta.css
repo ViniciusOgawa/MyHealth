@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre&family=Roboto:wght@300&display=swap');
+
+body {
+    height: calc(100vh - 87px);
+    font-family: 'Averia Libre', cursive;
+    background-color: rgb(172, 218, 213);
+}
+
+header {
+    background-color: hsla(174, 44%, 83%, 1);
+}
+
+main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+main .box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.box section {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+}
+
+.cadastrarButton {
+    font-family: 'Averia Libre', cursive;
+    background-color: hsla(144, 55%, 48%, 1);
+    border: none;
+    width: 150px;
+    height: 40px;
+    color: #fff;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    font-size: 17px;
+}
+
+.radioBox {
+    width: 505px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.dateBox {
+    width: 505px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.data {
+    font-family: 'Averia Libre', cursive;
+    width: 200px;
+    height: 40px;
+    border: none;
+}
+
+#valida-senha{
+    display: none;
+    font-size: 15px;
+    color: #FD7979;
+}

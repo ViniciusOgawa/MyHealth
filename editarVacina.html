@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/editarVacina.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/inputs.css">
+    <link rel="stylesheet" href="./styles/label.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+
+        <section class="logo">
+            <img src="./img/vaccine.png" alt="icone">
+            <p>MyHealth</p>
+        </section>
+
+        <section class="miniMenu">
+            <input type="button" value="Minhas vacinas" class="minhasVacinasButton">
+            <input type="button" value="Logout" class="logoutButton">
+        </section>
+        
+    </header>
+
+    <section class="excluir">
+        <input type="button"  value="Excluir" class="buttonExcluir">
+    </section>
+
+    <main>
+
+        <form>
+            <section class="box">
+                <section class="labels">
+                    <div>
+                        <label for="data" class="label">Data da vacicação</label>
+                    </div>
+        
+                    <div>
+                        <label for="vacina" class="label">Vacina</label>
+                    </div>
+
+                    <div>
+                        <label for="doseGeral" class="label">Dose</label>
+                    </div>
+
+                    <div>
+                        <label for="comprovante" class="label">Comprovante de vacina</label>
+                    </div>
+
+                    <div>
+                        <label for="proxVacina" class="label">Próxima vacinação</label>
+                    </div>
+                </section>
+        
+                <section class="inputs">
+                    <div>
+                        <input type="date" class="data">
+                    </div>
+                    <div>
+                        <input type="text" class="textBox" id="textBoxEdit">
+                    </div>
+                    <div class="radioBox">
+                    
+                        <section>
+                            <input type="radio" name="1dose" class="radioButton">
+                            <label for="1dose" class="radioLabel">1a. dose</label>
+                        </section>
+                        <section>
+                            <input type="radio" name="2dose" class="radioButton">
+                            <label for="2dose" class="radioLabel">2a. dose</label>
+                        </section>
+                        <section>
+                            <input type="radio" name="3dose" class="radioButton">
+                            <label for="3dose" class="radioLabel">3a. dose</label>
+                        </section>
+                        <section>
+                            <input type="radio" name="reforco" class="radioButton">
+                            <label for="reforco" class="radioLabel">Reforço</label>
+                        </section>
+                        <section>
+                            <input type="radio" name="doseUnica" class="radioButton">
+                            <label for="doseUnica" class="radioLabel">Dose única</label>
+                        </section>
+    
+                    </div>
+                    <div>
+                        <label for="comprovante" id="fileLabel">Selecionar imagem...</label>
+                        <input type="file" class="comprovante" name="comprovante" id="comprovante">
+                    </div>
+                    <div>
+                        <input type="date" class="data">
+                    </div>
+                </section>
+    
+            </section>
+
+            <input type="button" value="Cadastrar" class="cadastrarButton">
+            
+        </form>
+
+    </main>
+    
+</body>
+</html>

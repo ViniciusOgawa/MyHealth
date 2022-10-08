@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/criarConta.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/inputs.css">
+    <link rel="stylesheet" href="./styles/label.css">
+    <script defer type="module" src="./scripts/criarConta.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+
+        <section class="logo">
+            <img src="./img/vaccine.png" alt="icone">
+            <p>MyHealth</p>
+        </section>
+
+    </header>
+
+    <main>
+
+        <form>
+
+            <section class="box">
+                
+                <section>
+                    <label for="nome" class="label">Nome completo</label>
+                    <input type="text" class="textBox"> 
+                </section> 
+    
+                <section>
+                    <label for="sexo" class="label">Sexo</label>
+                    <div class="radioBox">
+                        <section>
+                            <input type="radio" name="sexo" class="radioButton">
+                            <label for="masculino" class="radioLabel">masculino</label>
+                        </section>
+                        <section>
+                            <input type="radio" name="sexo" class="radioButton">
+                            <label for="masculino" class="radioLabel">feminino</label>   
+                        </section>
+                    </div>
+                </section>
+    
+                <section>
+                    <label for="data" class="label">Data</label>
+                    <div class="dateBox">
+                        <input type="date" class="data">
+                    </div>    
+                </section>
+    
+                <section>
+                    <label for="email" class="label">E-mail</label>
+                    <input type="text" class="textBox" id="email">
+                </section>
+    
+                <section>
+                    <label for="senha" class="label">Senha</label>
+                    <input type="password" class="textBox" id="senha">
+                </section>
+    
+                <section>
+                    <label for="repSenha" class="label">Repetir senha</label>
+                    <input type="password" class="textBox" id="rept-senha">
+                </section>
+
+                <section>
+                    <p id="valida-senha">Senha não confere!</p>
+                </section>
+
+            </section>
+
+            <input type="button" value="Cadastrar" class="cadastrarButton" id="btnCadastro">
+
+        </form>
+
+    </main>
+    
+</body>
+</html>
