@@ -42,4 +42,9 @@ main section {
     color: #fff;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     font-size: 17px;
+    cursor: pointer;
+}
+
+.redefinirButton:hover {
+    opacity: 0.7;
 }

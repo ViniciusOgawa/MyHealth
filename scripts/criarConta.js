@@ -1,6 +1,3 @@
-import {app, auth} from "../config/fireBase.js";
-import {createUserWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
-
 function criarConta() {
 
     const email = document.getElementById("email");
@@ -16,10 +13,15 @@ function criarConta() {
 
         validaSenha.style.display = "none";
 
-        createUserWithEmailAndPassword(auth, email.value, senha.value)
+        firebase.auth().createUserWithEmailAndPassword(email.value, senha.value)
         .then((data) => {
 
-            console.log(data.user.uid);
+            alert("Conta criada com sucesso!");
+
+        })
+        .catch((error) => {
+
+            alert(error);
 
         })
 

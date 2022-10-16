@@ -144,3 +144,24 @@ main .box {
     font-size: 17px;
     cursor: pointer;
 }
+
+.cadastrarButton:hover {
+    opacity: 0.5;
+}
+
+#fileLabel:hover {
+    opacity: 0.5;
+}
+
+.buttonExcluir:hover {
+    opacity: 0.5;
+}
+
+.minhasVacinasButton:hover {
+    opacity: 0.5;
+}
+
+
+.logoutButton:hover {
+    opacity: 0.5;
+}

@@ -109,7 +109,7 @@ main .box {
     cursor: pointer;
 }
 
-#textBoxEdit {
+#nomeVacina {
     width: 198px;
 }
 
@@ -123,4 +123,16 @@ main .box {
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     font-size: 17px;
     cursor: pointer;
+}
+
+.cadastrarButton:hover {
+    opacity: 0.7;
+}
+
+.logoutButton:hover {
+    opacity: 0.7;
+}
+
+.minhasVacinasButton:hover {
+    opacity: 0.7;
 }

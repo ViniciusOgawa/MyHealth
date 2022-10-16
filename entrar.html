@@ -6,8 +6,6 @@
     <link rel="stylesheet" href="./styles/entrar.css">
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/header.css">
-    <script defer src="./scripts/entrar.js" type="module"></script>
-    <script defer src="./scripts/navegacao.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -34,11 +32,35 @@
                 <input type="password" class="textBox" id="senha">
             </section>
 
+            <p id="alert">E-mail e/ou senha inválidos</p>
+
         </section>
 
         <input type="button" value="Entrar" class="loginButton" id="btnLogin">
 
+        <button id="recSenhaBtn" >Esqueci minha senha</button>
+
     </main>
+
+    <script>
+
+        btn = document.getElementById("recSenhaBtn");
+        
+        btn.addEventListener("click",() => {
+
+            window.location.href = "recuperarSenha.html"
+
+        })
+
+    </script>
+
+    <script src="https://www.gstatic.com/firebasejs/9.11.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.11.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.11.0/firebase-firestore-compat.js"></script>
+
+    <script src="./config/fireBase.js"></script>
+    <script src="./scripts/entrar.js" type="module"></script>
+    <script src="./scripts/recSenha.js" type="module"></script>
     
 </body>
 </html>

@@ -7,9 +7,26 @@
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/inputs.css">
     <link rel="stylesheet" href="./styles/label.css">
+    <link rel="stylesheet" href="./styles/modal.css">
+    <script defer src="./scripts/modal.js"></script>
     <title>Document</title>
 </head>
 <body>
+
+    <div class="modal-wrapper" id="modal-excluir">
+
+        <div class="modal">
+
+            <p>Tem certeza que deseja remover essa vacina?</p>
+
+            <div class="box-btn">
+                <button data-modal-control="modal-excluir" id="btnExcluir">SIM</button>
+                <button data-modal-control="modal-excluir" id="cancelar">CANCELAR</button>
+            </div>
+
+        </div>
+
+    </div>
 
     <header>
 
@@ -19,14 +36,14 @@
         </section>
 
         <section class="miniMenu">
-            <input type="button" value="Minhas vacinas" class="minhasVacinasButton">
-            <input type="button" value="Logout" class="logoutButton">
+            <input type="button" value="Minhas vacinas" class="minhasVacinasButton" id="btnHome">
+            <input type="button" value="Logout" class="logoutButton" id="btnLogout">
         </section>
         
     </header>
 
     <section class="excluir">
-        <input type="button"  value="Excluir" class="buttonExcluir">
+        <input type="button"  value="Excluir" class="buttonExcluir" data-modal-control="modal-excluir">
     </section>
 
     <main>
@@ -57,31 +74,31 @@
         
                 <section class="inputs">
                     <div>
-                        <input type="date" class="data">
+                        <input type="date" class="data" id="dataVacina">
                     </div>
                     <div>
-                        <input type="text" class="textBox" id="textBoxEdit">
+                        <input type="text" class="textBox" id="nomeVacina">
                     </div>
                     <div class="radioBox">
                     
                         <section>
-                            <input type="radio" name="1dose" class="radioButton">
+                            <input type="radio" name="tipoDose" class="radioButton" value="1a. dose">
                             <label for="1dose" class="radioLabel">1a. dose</label>
                         </section>
                         <section>
-                            <input type="radio" name="2dose" class="radioButton">
+                            <input type="radio" name="tipoDose" class="radioButton" value="2a. dose">
                             <label for="2dose" class="radioLabel">2a. dose</label>
                         </section>
                         <section>
-                            <input type="radio" name="3dose" class="radioButton">
+                            <input type="radio" name="tipoDose" class="radioButton" value="3a. dose">
                             <label for="3dose" class="radioLabel">3a. dose</label>
                         </section>
                         <section>
-                            <input type="radio" name="reforco" class="radioButton">
+                            <input type="radio" name="tipoDose" class="radioButton" value="Dose de reforço">
                             <label for="reforco" class="radioLabel">Reforço</label>
                         </section>
                         <section>
-                            <input type="radio" name="doseUnica" class="radioButton">
+                            <input type="radio" name="tipoDose" class="radioButton" value="Dose única">
                             <label for="doseUnica" class="radioLabel">Dose única</label>
                         </section>
     
@@ -91,17 +108,24 @@
                         <input type="file" class="comprovante" name="comprovante" id="comprovante">
                     </div>
                     <div>
-                        <input type="date" class="data">
+                        <input type="date" class="data" id="dataProxVacina" id="btnCadastrar">
                     </div>
                 </section>
     
             </section>
 
-            <input type="button" value="Cadastrar" class="cadastrarButton">
+            <input type="button" value="Cadastrar" class="cadastrarButton" id="btnCadastrar">
             
         </form>
 
     </main>
+
+    <script src="https://www.gstatic.com/firebasejs/9.11.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.11.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.11.0/firebase-firestore-compat.js"></script>
+
+    <script src="./config/fireBase.js"></script>
+    <script src="./scripts/editarVacina.js"></script>
     
 </body>
 </html>

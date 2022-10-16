@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/recuperarSenha.css">
     <link rel="stylesheet" href="./styles/header.css">
+    <script defer src="./scripts/recSenha.js" type="module"></script>
     <title>Document</title>
 </head>
 <body>
@@ -22,10 +23,18 @@
 
         <section>
             <label for="email" class="label">E-mail</label>
-            <input type="text" class="textBox">
+            <input type="text" class="textBox" id="email">
         </section>    
 
-        <input type="button" value="Redefinir Senha" class="redefinirButton">
+        <input type="button" value="Redefinir Senha" class="redefinirButton" id="recoverBtn">
     </main>
+
+    <script src="https://www.gstatic.com/firebasejs/9.11.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.11.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.11.0/firebase-firestore-compat.js"></script>
+
+    <script src="./config/fireBase.js"></script>
+    <script src="./scripts/recSenha.js" type="module"></script>
+    
 </body>
 </html>

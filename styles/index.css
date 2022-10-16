@@ -19,6 +19,7 @@ header .tenhocontaButton {
     color: #fff;
     border: none;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
 main {
@@ -53,4 +54,13 @@ main section input {
     font-weight: 400;
     border: none;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.tenhocontaButton:hover {
+    opacity: 0.9;
+}
+
+main section input:hover {
+    opacity: 0.9;
 }

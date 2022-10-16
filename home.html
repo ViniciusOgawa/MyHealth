@@ -18,7 +18,7 @@
 
         <section class="miniMenu">
             <input type="button" value="Minhas vacinas" class="minhasVacinasButton">
-            <input type="button" value="Logout" class="logoutButton">
+            <input type="button" value="Logout" class="logoutButton" id="logoutBtn">
         </section>
         
     </header>
@@ -31,22 +31,22 @@
         </div>
 
         <div class="box-vacinas">
-            <ul>
-                <li class="li-vacinas">
-                    <p class="nome">BCG</p>
-                    <p class="dose">Dose única</p>
-                    <p class="data">11/06/2022</p>
-                    <img src="./img/image-comprovante.png" alt="Comprovante" class="img">
-                    <div class="box-inf">
-                        <p class="inf">Nao ha proxima dose</p>
-                    </div>
-                </li>
+            <ul id="ul">
+                
             </ul>
         </div>
 
-        <input type="button" value="Nova vacina" class="novavacinaButton">
+        <input type="button" value="Nova vacina" class="novavacinaButton" id="btnNovaVacina">
 
     </main>
+
+    <script src="https://www.gstatic.com/firebasejs/9.11.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.11.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.11.0/firebase-firestore-compat.js"></script>
+
+    <script src="./config/fireBase.js"></script>
+    <script defer src="./scripts/home.js" type="module"></script>
+    <script defer src="./scripts/fbGuard.js" type="module"></script>
     
 </body>
 </html>
