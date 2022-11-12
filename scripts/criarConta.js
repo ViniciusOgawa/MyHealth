@@ -14,9 +14,10 @@ function criarConta() {
         validaSenha.style.display = "none";
 
         firebase.auth().createUserWithEmailAndPassword(email.value, senha.value)
-        .then((data) => {
+        .then(() => {
 
             alert("Conta criada com sucesso!");
+            window.location.href = "entrar.html"
 
         })
         .catch((error) => {

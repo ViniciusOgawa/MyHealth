@@ -69,6 +69,7 @@ function criarCard(element) {
     pNome.innerText = element.vacina;
     pDose.innerText = element.dose;
     pData.innerText = element.data;
+    img.src = "img/image-comprovante.png"
 
     if(element.proxVacina) {
 
@@ -101,7 +102,7 @@ firebase.auth().onAuthStateChanged(user => {
 
     if(user) {
 
-        carregarVacinas(user)
+        carregarVacinas(user);
 
     }
 
@@ -114,17 +115,76 @@ function carregarVacinas(user) {
         .get()
         .then(snapshot => {
 
-            snapshot.docs.forEach(doc => {
-
-                listarCard(snapshot.docs.map(doc => ({
-                    ...doc.data(),
-                    uid: doc.id
-                })));
-
-            });
+            listarCard(snapshot.docs.map(doc => ({
+                ...doc.data(),
+                uid: doc.id
+            })));
 
         });
 }
+
+function filtrarVacinas(value) {
+
+    firebase.auth().onAuthStateChanged(user => {
+
+        firebase.firestore()
+        .collection("Vacinas")
+        .where("user.uid", "==", user.uid)
+        .get()
+        .then(snapshot => {
+
+            const vacinas = snapshot.docs.map(doc => ({
+                ...doc.data(),
+                uid: doc.id
+            }));
+
+            const filterVacinas = vacinas.filter((element) => {
+
+                return element.vacina == value;
+
+            })
+
+            if(filterVacinas.length != 0) {
+
+                listarCard(filterVacinas);
+
+            }else {
+
+                alert("Vacina não encontrada!")
+
+            }
+
+        })
+    
+    });
+
+}
+
+const btnBusca = document.getElementById("btnBusca");
+
+btnBusca.addEventListener("click",() => {
+
+    const value = document.getElementById("input").value;
+
+    filtrarVacinas(value);
+
+})
+
+const vacinasBtn = document.getElementById("vacinasBtn");
+
+vacinasBtn.addEventListener("click", () => {
+
+    firebase.auth().onAuthStateChanged(user => {
+
+        if(user) {
+    
+            carregarVacinas(user);
+    
+        }
+    
+    });
+
+})
 
 /*
 
